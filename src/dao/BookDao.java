@@ -98,6 +98,11 @@ public final class BookDao implements Dao<Integer,Book> {
         }
     }
 
+    @Override
+    public Book create(Book object) {
+        return null;
+    }
+
     public List<Book> getBooksByAuthorId(int id) {
         try (var connection = ConnectionManager.get();
              var statement = connection.prepareStatement(GET_BY_ID_SQL)) {

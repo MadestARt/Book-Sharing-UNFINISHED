@@ -10,4 +10,6 @@ public interface Dao<K,E> {
 
     List<E> getAll();
 
+    E create(E object);
+
 }

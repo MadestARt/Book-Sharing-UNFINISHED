@@ -59,6 +59,11 @@ public final class AuthorDao implements Dao<Integer, Author>{
         }
     }
 
+    @Override
+    public Author create(Author object) {
+        return null;
+    }
+
     public Optional<Author> getById(Integer id, Connection connection) {
         try (var selectStatement = connection.prepareStatement(SELECT_BY_ID_SQL)){
             selectStatement.setInt(1,id);

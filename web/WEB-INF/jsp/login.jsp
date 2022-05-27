@@ -29,6 +29,10 @@
         </span>
     </c:if>
 
+    <a href="/registration">
+        Зарегестрироваться
+    </a>
+
 </form>
 </body>
 </html>

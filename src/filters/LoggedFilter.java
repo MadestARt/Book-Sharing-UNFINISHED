@@ -17,7 +17,9 @@ public class LoggedFilter implements Filter {
         if (request.getSession().getAttribute("user") != null) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
-            request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(servletRequest,servletResponse);
+            var previousPage = ((HttpServletRequest) servletRequest).getHeader("referer");
+
+            ((HttpServletResponse) servletResponse).sendRedirect(previousPage != null ? previousPage : "/login");
         }
     }
 }

@@ -4,6 +4,7 @@
 <head>
     <title>Title</title>
 </head>
+<%@include file="logout.jsp"%>
 <body>
     <h2> ${requestScope.helloMessage}</h2>
     <h1> Список Авторов : </h1>

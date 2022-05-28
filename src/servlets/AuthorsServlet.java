@@ -11,7 +11,7 @@ import validator.CreateUserValidator;
 
 import java.io.IOException;
 
-@WebServlet("/authors")
+@WebServlet(value = "/authors",name = "AuthorsServlet")
 public class AuthorsServlet extends HttpServlet {
 
     private AuthorService authorService = AuthorService.getInstance();

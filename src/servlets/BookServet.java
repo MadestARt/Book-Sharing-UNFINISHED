@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 
-@WebServlet("/books")
+@WebServlet(value = "/books",name = "BookServlet")
 public class BookServet extends HttpServlet {
 
     private final BookService bookService = BookService.getInstace();

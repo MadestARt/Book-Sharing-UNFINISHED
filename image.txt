@@ -1,6 +1,0 @@
-asd
-
-testWithAmbitions() {
-	assertEquals(e,b);
-
-}
